@@ -1,12 +1,20 @@
-function App() {
+import { useAuth } from './hooks/useAuth';
 
+const App = () => {
+  const Test = () => {
+    const { user, setUser } = useAuth();
+
+    return (
+      <button onClick={() => setUser({ name: 'vijay' })}>
+        {user ? user.name : 'no user'}
+      </button>
+    );
+  };
   return (
     <>
-      <h1 
-      class="text-3xl font-bold underline">Hello 
-      world!</h1>
+      <Test></Test>
     </>
   );
-}
+};
 
 export default App;
