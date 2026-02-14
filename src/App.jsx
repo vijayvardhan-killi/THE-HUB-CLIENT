@@ -1,19 +1,15 @@
-import { useAuth } from './hooks/useAuth';
+import { Routes, Route } from 'react-router-dom';
+import Login from './pages/Login';
+import Dashboard from './pages/Dashboard';
+import Landing from './pages/Landing';
 
 const App = () => {
-  const Test = () => {
-    const { user, setUser } = useAuth();
-
-    return (
-      <button onClick={() => setUser({ name: 'vijay' })}>
-        {user ? user.name : 'no user'}
-      </button>
-    );
-  };
   return (
-    <>
-      <Test></Test>
-    </>
+    <Routes>
+      <Route path="/" element={<Landing />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/dashboard" element={<Dashboard />} />
+    </Routes>
   );
 };
 
