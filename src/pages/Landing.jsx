@@ -1,13 +1,18 @@
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import { Link } from 'react-router-dom';
-import { ArrowRight, BookOpen, Zap, Users, Trophy } from 'lucide-react';
+import {
+  ArrowRight,
+  BookOpen,
+  Zap,
+  Users,
+  Trophy,
+  Printer,
+} from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import FeatureSection from '@/components/common/landing/FeatureSection';
 
 const Landing = () => {
-
-
   return (
     <>
       <Navbar />
@@ -25,19 +30,21 @@ const Landing = () => {
               building expertise through THE HUB's comprehensive platform.
             </p>
             <div className="flex gap-4">
-              <Link href="/signup">
+              <Link to="/signup">
                 <Button size="lg" className="bg-primary hover:bg-primary/90">
                   Start Coding Now
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </Link>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-border hover:bg-card bg-transparent"
-              >
-                Explore Problems
-              </Button>
+              <Link to={'dashboard/problems'}>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-border hover:bg-card bg-transparent"
+                >
+                  Explore Problems
+                </Button>
+              </Link>
             </div>
           </div>
 

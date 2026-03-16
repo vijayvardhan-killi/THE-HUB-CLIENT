@@ -1,4 +1,4 @@
-import LoginForm from '@/components/common/auth/LoginForm';
+import SignUpForm from '@/components/common/auth/SignupForm';
 
 import { cn } from '@/lib/utils';
 import { Card, CardContent } from '@/components/ui/card';
@@ -6,17 +6,15 @@ import { FieldDescription } from '@/components/ui/field';
 
 import loginbg from '@/assets/loginbg.png';
 
-import { Topbar } from '@/components/common/dashboard/TopBar';
-
-const Login = ({ className, ...props }) => {
+const SignUp = ({ className, ...props }) => {
   return (
     <div className="bg-muted flex min-h-svh flex-col items-center justify-center p-6 md:p-10">
       <div className="w-full max-w-sm md:max-w-4xl">
         <div className={cn('flex flex-col gap-6', className)} {...props}>
           <Card className="overflow-hidden p-0">
             <CardContent className="grid p-0 md:grid-cols-2">
-              {/* Login form */}
-              <LoginForm />
+              {/* SignUp form */}
+              <SignUpForm />
               <div className="bg-muted relative hidden md:block">
                 <img
                   src={loginbg}
@@ -37,4 +35,4 @@ const Login = ({ className, ...props }) => {
   );
 };
 
-export default Login;
+export default SignUp;
